@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Secure Content State Tests</title>
+</head>
+<body>
+    <h1>window.open tests</h1>
+    
+    <button onclick="test1()">"Test URL: "about:blank"</button>
+    <button onclick="test2()">Test URL: "google.com"</button>
+    <button onclick="test3()">Test URL: "google.com" + _blank</button>
+    <button onclick="test4()">Test URL: "https://google.com"</button>
+    <button onclick="test5()">Test URL: "https://google.com" + _blank</button>
+  
+
+    <h1>location.href tests</h1>
+    <button onclick="test6()">document.location.href: https://google.ca</button>
+
+    <script>
+        function test1() {
+        var myWindow = window.open("", "", "width=200,height=100");
+        return;
+        }
+        function test2() {
+        var myWindow = window.open("google.com", "", "width=200,height=100");
+        return;
+        }
+        function test3() {
+        var myWindow = window.open("google.com", "_blank", "width=200,height=100");
+        return;
+        }
+        function test4() {
+        var myWindow = window.open("https://google.com", "", "width=200,height=100");
+        return;
+        }
+        function test5() {
+        var myWindow = window.open("https://google.com", "_blank", "width=200,height=100");
+        return;
+        }
+        function test6() {
+        location.href = "https://google.ca";
+        }
+</script>
+    </script>
+</body>
+</html>
