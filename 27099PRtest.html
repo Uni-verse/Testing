@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+    iframe > a {
+        font-size: 300%;
+    }
+    </style>
 </head>
 <body>
-<iframe srcdoc="<a style="font-size: 300%;" href=tel:+1234567890>tel: test</a>"></iframe>
-<iframe srcdoc="<a style="font-size: 300%;" href=facetime-audio:+1234567890>facetime-audio test</a>"></iframe>
-<iframe srcdoc="<a style="font-size: 300%;" href=facetime:+1234567890>facetime test</a>"></iframe>
+<iframe srcdoc="<a href=tel:+1234567890>tel: test</a>"></iframe>
+<iframe srcdoc="<a href=facetime-audio:+1234567890>facetime-audio test</a>"></iframe>
+<iframe srcdoc="<a href=facetime:+1234567890>facetime test</a>"></iframe>
 </body>
 </html>
